@@ -1,0 +1,17 @@
+services:
+  satlyt-server:
+    build: ./satlyt_clean
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./satlyt_clean/results:/app/results
+      - ./satlyt_clean/errors:/app/errors
+    container_name: satlyt-container
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 512M
