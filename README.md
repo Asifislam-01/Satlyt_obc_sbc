@@ -1,6 +1,9 @@
 # Satellite Gateway System
 
-A comprehensive satellite communication gateway system that enables communication between On-Board Computer (OBC) systems and Docker-based satellite processing containers.
+A comprehensive satellite communication gateway system that enables communication between On-Board Computer (OBC) systems and Docker-based satellite processing containers. 
+You can get the flow diagrams of the architecture from here for a better understanding. 
+
+https://drive.google.com/file/d/1Q04CsCubErJ4CrO48roD8q-xkgsPjngp/view?usp=sharing
 
 ##  Architecture Overview
 
