@@ -2,7 +2,7 @@
 
 A comprehensive satellite communication gateway system that enables communication between On-Board Computer (OBC) systems and Docker-based satellite processing containers.
 
-## 🏗️ Architecture Overview
+##  Architecture Overview
 
 The system consists of three main components:
 
@@ -39,7 +39,7 @@ The system consists of three main components:
    - TCP bridge for remote communication
    - Enables OBC integration
 
-##  Quick Start
+##  Quick Start Procedure
 
 ### Prerequisites
 
@@ -73,7 +73,7 @@ The system consists of three main components:
    docker-compose -f docker-compose-up.yml up -d
    ```
 
-##  Detailed Setup Instructions
+## Detailed Setup Instructions
 
 ### Step 1: Environment Setup
 
@@ -333,57 +333,6 @@ python3 gateway.py 2>&1 | tee gateway.log
 - Results: `./satlyt_clean/results/`
 - Errors: `./satlyt_clean/errors/`
 
-## 📊 Monitoring and Maintenance
-
-### Health Checks
-
-```bash
-# Check system status
-./setup_virtual_serial.sh status
-docker ps
-python3 resource_manager.py status
-
-# Test full workflow
-echo "PING" | nc localhost 9999
-echo "START_CONTAINER" | nc localhost 9999
-```
-
-### Performance Monitoring
-
-The system provides real-time container statistics:
-- CPU usage percentage
-- Memory usage and percentage
-- Network I/O
-- Block I/O
-- Container uptime
-
-### Maintenance Tasks
-
-1. **Regular Cleanup**:
-   ```bash
-   # Clean old result files
-   find ./satlyt_clean/results -name "*.txt" -mtime +7 -delete
-   
-   # Clean Docker images
-   docker system prune -f
-   ```
-
-2. **Resource Optimization**:
-   ```bash
-   # Monitor resource usage
-   docker stats satlyt-container
-   
-   # Adjust limits as needed
-   python3 resource_manager.py set 1.0 1G
-   ```
-
-##  Security Considerations
-
-- Virtual serial port permissions
-- Docker container isolation
-- Network access controls
-- File system permissions
-- Resource limits to prevent DoS
 
 ##  API Reference
 
@@ -404,7 +353,7 @@ Base URL: `http://localhost:3000`
 | GET | `/LIST-FILES` | List all files |
 | POST | `/CREATE-ERROR` | Create error log |
 
-##  Support
+## Support
 
 **Important Note**: The configurations provided in this README are based on our specific setup. For your own setup, you may need to make some adjustments as mentioned in the configuration sections above.
 
@@ -415,12 +364,3 @@ For technical support and questions:
 - Verify your Docker and virtual serial configurations
 - If you encounter any errors or issues not covered in this guide, feel free to contact us anytime
 
-**Contact Information**: [Add your contact details here]
-
-##  License
-
-[Add your license information here]
-
----
-
-**Note**: This system is designed for satellite communication scenarios and requires proper hardware integration for production use.
