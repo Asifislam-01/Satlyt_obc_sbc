@@ -357,3 +357,95 @@ python3 gateway.py
 ./setup_virtual_serial.sh stop
 ./setup_virtual_serial.sh start
 python3 gateway.py
+ls
+cat docker-compose-up.yml
+./setup_virtual_serial.sh stop
+./setup_virtual_serial.sh start
+python3 gateway.py
+./setup_virtual_serial.sh stop
+./setup_virtual_serial.sh start
+python3 gateway.py
+echo "PING" | nc w -3 localhost 9999
+echo "PING" | nc -w 3 localhost 9999
+docker ps
+echo "GET_CONTAINER_STATUS" | nc -w 3 localhost 9999
+docker ps 
+ls
+echo "START_CONTAINER" | nc -w 3 localhost 9999
+docker rm 668f7d8c4975af74cc84afe3d24ecb388a88171c96566dc0d7e97764a20da98e
+docker ps
+echo "START_CONTAINER" | nc -w 3 localhost 9999
+docker ps 
+docker stats b9095e77f7c8
+echo "STOP_CONTAINER" | nc -w 3 localhost 9999
+docker ps 
+docker stats b9095e77f7c8
+echo "RUN_PAYLOAD" | nc -w 3 localhost 9999
+echo "PING" | nc -w 3 localhost 9999
+echo "RUN_PAYLOAD" | nc -w 3 localhost 9999
+docker ps
+echo "START_CONTAINER" | nc -w 3 localhost 9999
+docker ps
+echo "START_CONTAINER" | nc -w 3 localhost 9999
+echo "RUN_PAYLOAD" | nc -w 3 localhost 9999
+docker ps
+echo "GET_STATUS" | nc -w 3 localhost 9999
+docker ps
+docker stop 4b86e0aa3496
+docker ps
+echo "PING" | nc -w 3 localhost 9999
+echo "START_CONTAINER" | nc -w 3 localhost 9999
+echo "PING" | nc -w 3 localhost 9999
+docker ps
+echo "RUN_PAYLOAD" | nc -w 3 localhost 9999
+echo "GET_STATUS" | nc -w 3 localhost 9999
+docker logs satlyt-containe
+docker ps
+docker stop 4b86e0aa3496
+echo "PING" | nc -w 3 localhost 9999
+echo "START_CONTAINER" | nc -w 3 localhost 9999
+echo "PING" | nc -w 3 localhost 9999
+echo "GET_STATUS" | nc -w 3 localhost 9999
+echo "RUN_PAYLOAD" | nc -w 3 localhost 9999
+echo "GET_STATUS" | nc -w 3 localhost 9999
+echo "GET_FILES" | nc -w 3 localhost 9999
+echo "GET_STATUS" | nc -w 3 localhost 9999
+docker ps
+echo "GET_STATUS" | nc -w 3 localhost 9999
+echo "GET_FILES" | nc -w 3 localhost 9999
+echo "GET_STATUS" | nc -w 3 localhost 9999
+docker ps
+LS
+ls
+docker ps
+ls
+python3 resource_manager.py set 0.5 512M
+docker ps 
+ls
+git init
+cat > .gitignore << EOF
+node_modules/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+*.log
+EOF
+
+ls
+git add .
+git commit -m "OBC_SBC_emulator_setup_1.0"
+git config --global user.name
+git config --global user.name Asif
+git config --global user.email asif@catalyx.space
+git commit -m "OBC_SBC_emulator_setup_1.0"
+git remote add origin https://github.com/Catalyx-Space/Satlyt_obc_sbc.git
+git branch
+git remote -v
+git push -u origin master
+git remote -v
+git remote add origin https://github.com/Asifislam-01/Satlyt_obc_sbc.git
+git remote set-url origin https://github.com/Asifislam-01/Satlyt_obc_sbc.git
+git remote -v
+git branch 
+git push -u origin master
